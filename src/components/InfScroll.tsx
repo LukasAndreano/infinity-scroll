@@ -54,11 +54,11 @@ export const InfScroll: React.FC<InfScrollProps> = ({
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [rootRef, bottomRef]);
 
-    return <div ref={rootRef} style={{height: '100vh', overflowY: 'scroll'}}>
+    return <>
         {children}
         <div ref={bottomRef}/>
         {showLoader && loader}
-    </div>
+    </>
 }
 
 export default InfScroll
